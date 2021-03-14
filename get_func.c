@@ -5,7 +5,7 @@
  * @argspass: arguments being passed
  * @argspos: position of arguments
  *
- *
+ * Return: 0
  */
 
 int (*_typedef(const char *argspass, int argspos))(va_list)
@@ -14,7 +14,7 @@ int (*_typedef(const char *argspass, int argspos))(va_list)
 		{"c", print_char},
 		{"s", print_string},
 		{"i", print_int},
-		{"d", print_deci},
+		{"d", print_int},
 		{NULL, NULL},
 	};
 

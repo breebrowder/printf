@@ -23,7 +23,6 @@ int _printf(const char *format, ...);
 int (*_typedef(const char *argspass, int argspos))(va_list);
 int print_char(va_list c);
 int print_string(va_list s);
-int print_int(va_list i);
-int print_deci(va_list d);
+int print_int(va_list id);
 
 #endif
