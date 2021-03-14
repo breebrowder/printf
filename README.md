@@ -27,7 +27,7 @@ $  gcc -Wall -Werror -Wextra -pedantic *.c
 
 | Conversion    | Specifiers    |                            |
 | ------------- |:-------------:| ---------------:           |
-| %c | prints a charcter        |                            |
+| %c | prints a character        |                            |
 | %s | prints a string          |                            |
 | %% | prints a percent         |                            |
 | %d | prints a decimal integer | assumes base 10            |
