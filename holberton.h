@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <unistd.h>
 #include <systypes.h>
 #include <string.h>
 
@@ -12,6 +13,7 @@
  * @parameters: all specifier arguments
  * @func: pointer function
  */
+
 typedef struct specifier
 {
 	char *parameters;
