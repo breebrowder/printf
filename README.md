@@ -25,7 +25,7 @@ $  gcc -Wall -Werror -Wextra -pedantic *.c
 
 ### Formatting
 
-| Conversion    | Specifiers    | (Mandatory)                |
+| Conversion    | Specifiers    |                            |
 | ------------- |:-------------:| ---------------:           |
 | %c | prints a charcter        |                            |
 | %s | prints a string          |                            |
