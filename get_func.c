@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * @_typedef- struct of specifier types
+ * @*_typedef- struct of specifier types
  * @argspass: arguments being passed
  * @argspos: position of arguments
  *
@@ -20,7 +20,7 @@ int (*_typedef(const char *argspass, int argspos))(va_list)
 
 	int index;
 
-	for (types[index].args != '\0'; index++)
+	for (index = 0; types[index].args != '\0'; index++)
 	{
 		if (types[index].args[0] == argspass[argspos])
 		{

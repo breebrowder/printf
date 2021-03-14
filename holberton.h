@@ -5,11 +5,11 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <unistd.h>
-#include <systypes.h>
+#include <sys/types.h>
 #include <string.h>
 
 /**
- * specifier- our struct name
+ * struct specifier- our struct name
  * @parameters: all specifier arguments
  * @func: pointer function
  */
@@ -17,7 +17,7 @@
 typedef struct specifier
 {
 	char *parameters;
-	int(*func)(va_list);
+	int (*func)(va_list);
 };
 
 int _putchar(char c);
