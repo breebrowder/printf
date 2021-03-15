@@ -2,30 +2,30 @@
 
 /**
  * @*_typedef- struct of specifier types
- * @argspass: arguments being passed
- * @argspos: position of arguments
+ * @str: arguments being passed
+ * @pos: position of arguments
  *
  * Return: 0
  */
 
-int (*_typedef(const char *argspass, int argspos))(va_list)
+int (*_typedef(const char *str))(va_list)
 {
-	specifier types[] = {
+	sp_t types[] = {
 		{"c", print_char},
 		{"s", print_string},
-		{"i", print_int},
+/*		{"i", print_int},
 		{"d", print_int},
-		{NULL, NULL},
+*/		{NULL, NULL}
 	};
 
-	int index;
+	int j; /* iterator */
 
-	for (index = 0; types[index].args != '\0'; index++)
+	for (j = 0; types[j].args != '\0'; j++)
 	{
-		if (types[index].args[0] == argspass[argspos])
+		if (types[j].args[0] == str[0] && str[1] == '\0')
 		{
-			return (types[index].func);
+			return (types[j].func);
 		}
-		return (NULL);
 	}
+	return (NULL);
 }
