@@ -9,7 +9,7 @@
 
 int _printf(const char *format, ...)
 {
-	unsigned int i, j, k;
+	unsigned int i;
 	char *string;
 	va_list variables;
 
@@ -17,18 +17,11 @@ int _printf(const char *format, ...)
 
 	for (i = 0; format[i] != '\0'; i++)
 	{
-	}
-	for (j = 0; j <= i; j++)
-	{
-		_putchar(format[j]);
-		if (format[j] == '%' && format[j + 1])
+		_putchar(format[i]);
+		if (format[i] == '%' && format[i + 1])
 		{
-			string = ;
-			for (k = 0; string[k] != '\0'; k++)
-			{
-				_putchar(va_arg(variables, specifier));
-			}
-			j++;
+			_putchar(va_arg(variables, _typedef(format[i], i)));
+			i++;
 		}
 	}
 	return (0);

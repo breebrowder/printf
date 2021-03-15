@@ -3,22 +3,29 @@
 /**
  * print_char- print a char
  * @c: character argument
- *
- * Return: void
+ * Return: the char
  */
 
 int print_char(va_list c)
 {
-	_putchar (va_arg(c, int));
+	return (va_arg(c, char));
+}
 
-	return (1);
+/**
+ * print_int- print an int
+ * @i: int argument
+ * Return: the int
+ */
+
+int print_int(va_list i)
+{
+	return (va_arg(i, int));
 }
 
 /**
  * print_string- print a string
  * @s: string argument
- *
- * Return: void
+ * Return: the string
  */
 
 int print_string(va_list s)
@@ -26,14 +33,10 @@ int print_string(va_list s)
 	char *realstr;
 	int i;
 
-	realstr = va_arg(s, char *)
-
-		if (realstr == '\0')
-			return ('\0');
-
-	for (; realstr[i] != '\0'; i++)
+	realstr = va_arg(s, char *);
+	if (realstr == NULL)
 	{
-		_putchar (realstr[i]);
+		return (NULL);
 	}
-	return (i);
+	return (realstr);
 }
