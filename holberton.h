@@ -13,15 +13,14 @@
  * @func: pointer function
  */
 
-typedef struct specifier
+typedef struct
 {
 	char *parameters;
 	int(*func)(va_list);
-};
+}specifier;
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int (*_typedef(const char *argspass, int argspos))(string);
 int print_char(va_list c);
 int print_string(va_list s);
 int print_int(va_list id);

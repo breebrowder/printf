@@ -43,3 +43,16 @@ int print_int(int i)
 	_putchar(i);
 	return (0);
 }
+
+/**
+ * print_double- print a integer
+ * @d: double argument
+ *
+ * Return: 0
+ */
+
+int print_double(double d)
+{
+	_putchar(d);
+	return (0);
+}
