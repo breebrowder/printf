@@ -1,17 +1,29 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
-#include <unistd.h>
+
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
+#include <unistd.h>
+#include <string.h>
 
 /**
- * Team: Print Fun!
- * prototypes for printf project
+ * specifier- our struct name
+ * @parameters: all specifier arguments
+ * @func: pointer function
  */
 
-int _printf(const char *format, ...);
-int _putchar(char c)
+typedef struct specifier
 {
-	return (write(1, &c, 1));
+	char *parameters;
+	int(*func)(va_list);
 };
+
+int _putchar(char c);
+int _printf(const char *format, ...);
+int (*_typedef(const char *argspass, int argspos))(string);
+int print_char(va_list c);
+int print_string(va_list s);
+int print_int(va_list id);
 
 #endif
