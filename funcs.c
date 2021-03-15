@@ -23,6 +23,17 @@ int print_int(va_list i)
 }
 
 /**
+ * print_int- print an int
+ * @d: double argument
+ * Return: the double
+ */
+
+int print_double(va_list d)
+{
+	return (va_arg(d, double));
+}
+
+/**
  * print_string- print a string
  * @s: string argument
  * Return: the string

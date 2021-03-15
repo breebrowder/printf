@@ -20,7 +20,7 @@ int _printf(const char *format, ...)
 		_putchar(format[i]);
 		if (format[i] == '%' && format[i + 1])
 		{
-			_putchar(va_arg(variables, _typedef(format[i], i)));
+			_putchar(va_arg(variables, _typedef(format[i + 1], i)));
 			i++;
 		}
 	}
