@@ -52,8 +52,8 @@ int keep_count(int n)
 	{
 		div = (n / 10);  /* handle left values: divide argument by 10 */
 		mod = (n % 10); /* right values: get remainder after division */
-		counter += keep_count(mod); /* adds the value of the right
-	    operand to a variable and assigns the result to the variable */
+		counter += keep_count(mod);
+ /* adds the value of the right to variable & assigns result to the variable */
 		counter++;
 		_putchar(div + '0');
 		return (counter);

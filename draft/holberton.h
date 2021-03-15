@@ -5,23 +5,24 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <unistd.h>
+#include <sys/types.h>
 #include <string.h>
 
 /**
- * specifier- struct name
+ * struct specifier- our struct name
  * @parameters: all specifier arguments
  * @func: pointer function
  */
 
-typedef struct
+typedef struct specifier
 {
-	char *args;
-	int(*func)(va_list);
-
-}sp_t;
+	char *parameters;
+	int (*func)(va_list);
+};
 
 int _putchar(char c);
 int _printf(const char *format, ...);
+int (*_typedef(const char *argspass, int argspos))(va_list);
 int print_char(va_list c);
 int print_string(va_list s);
 int print_int(va_list id);
