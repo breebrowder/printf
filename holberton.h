@@ -8,7 +8,7 @@
 #include <string.h>
 
 /**
- * specifier- struct name
+ * specifier- our struct name
  * @parameters: all specifier arguments
  * @func: pointer function
  */
