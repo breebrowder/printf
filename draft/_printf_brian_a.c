@@ -9,20 +9,24 @@
 
 int _printf(const char *format, ...)
 {
-	unsigned int j, k;
+	unsigned int i, j, k;
 	char *string;
 	va_list variables;
 
 	va_start(variables, format);
 
-	for (j = 0; format[j] != '\0'; j++)
+	for (i = 0; format[i] != '\0'; i++)
+	{
+	}
+	for (j = 0; j <= i; j++)
 	{
 		_putchar(format[j]);
 		if (format[j] == '%' && format[j + 1])
 		{
+			string = ;
 			for (k = 0; string[k] != '\0'; k++)
 			{
-				_putchar((*specifier)());
+				_putchar(va_arg(variables, specifier));
 			}
 			j++;
 		}
