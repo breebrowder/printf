@@ -8,24 +8,24 @@
 
 int _printf(const char *format, ...)
 {
-        va_list variables;
-        unsigned int i = 0;
-        unsigned int y = 0;
+	va_list variables;
+	unsigned int i = 0;
+	unsigned int y = 0;
 
-        va_start(variables, format);
+	va_start(variables, format);
 
-        if (format[0] == '%' && format[1] == '\0')
-                return (-1);
+	if (format[0] == '%' && format[1] == '\0')
+		return (-1);
 
-        for (; format[i] != '\0'; i++)
-        {
-                if (format[i] == '%' && format[i + 1] == '%')
+	for (; format[i] != '\0'; i++)
+	{
+		if (format[i] == '%' && format[i + 1] == '%')
 		{
 			_putchar('%');
 			y++;
 			i++;
 		}
-		else if (_typedef(format, i + 1) != '\0')
+		else if (format[i] == '%' && _typedef(format, i + 1) != '\0')
 		{
 			y += _typedef(format, i + 1)(variables);
 			i++;
@@ -35,8 +35,9 @@ int _printf(const char *format, ...)
 			_putchar(format[i]);
 			y++;
 		}
-        }
-        return (y);
 
-        va_end(variables);
+	}
+	return (y);
+
+	va_end(variables);
 }
