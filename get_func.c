@@ -24,7 +24,7 @@ int (*_typedef(const char *str, int y))(va_list)
 
 	for (j = 0; types[j].args != '\0'; j++)
 	{
-		if (types[j].args[0] == str[y] && str[1] == '\0')
+		if (types[j].args[0] == str[y] && str[y + 1] != '\0')
 		{
 			return (types[j].func);
 		}

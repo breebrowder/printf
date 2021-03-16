@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
 			y++;
 			i++;
 		}
-		else if (format[i] == '%' && _typedef(format, i + 1) != '\0')
+		else if (format[i] == '%' && _typedef(format, i + 1) != NULL)
 		{
 			y += _typedef(format, i + 1)(variables);
 			i++;
@@ -35,7 +35,6 @@ int _printf(const char *format, ...)
 			_putchar(format[i]);
 			y++;
 		}
-
 	}
 	return (y);
 
