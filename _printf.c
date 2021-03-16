@@ -30,3 +30,13 @@ int _printf(const char *format, ...)
 			y += _typedef(format, i + 1)(variables);
 			i++;
 		}
+		else
+		{
+			_putchar(format[i]);
+			y++;
+		}
+        }
+        return (y);
+
+        va_end(variables);
+}
