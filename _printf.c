@@ -2,7 +2,7 @@
 
 /**
  * _printf - custom function that prints output format
- * @format: all arguments being passed
+ * @format: all args being passed
  * Return: 0
  */
 

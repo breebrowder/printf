@@ -3,7 +3,7 @@
 /**
  * @*_typedef- struct of specifier types
  * @str: arguments being passed
- * @y: position of arguments
+ * @y: position of args
  *
  * Return: 0
  */
