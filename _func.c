@@ -91,3 +91,29 @@ int print_int(int y, va_list dandi)
 
 	return (y);
 }
+/**
+ * print_rev- print a string reverse
+ * @r: string argument
+ * @y: count
+ * Return: void
+ */
+
+int print_rev(int y, va_list r)
+{
+	char *realstr;
+	int i;
+
+	realstr = va_arg(r, char *);
+
+	if (realstr == NULL)
+	{
+		y += _printf("(null)");
+		return (y);
+	}
+	for (i = _strlen(realstr) - 1; i >= 0; i--)
+	{
+		_putchar(realstr[i]);
+		y++;
+	}
+	return (y);
+}
