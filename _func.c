@@ -3,73 +3,91 @@
 /**
  * print_char- print a char
  * @c: character argument
- *
+ * @y: count
  * Return: void
  */
 
-int print_char(va_list c)
+int print_char(int y, va_list c)
 {
 	_putchar(va_arg(c, int));
+	y++;
 
-	return (1);
+	return (y);
 }
 
 /**
  * print_string- print a string
  * @s: string argument
- *
+ * @y: count
  * Return: void
  */
 
-int print_string(va_list s)
+int print_string(int y, va_list s)
 {
 	char *realstr;
 	int i;
 
 	realstr = va_arg(s, char *);
 
-		if (realstr == '\0')
-			return ('\0');
+		if (realstr == NULL)
+		{
+			realstr = "(null)";
+		}
 
-	for (; realstr[i] != '\0'; i++)
+	for (i = 0; realstr && realstr[i] != '\0'; i++)
 	{
-		_putchar (realstr[i]);
+		_putchar(realstr[i]);
+		y++;
 	}
-	return (i);
+	return (y);
 }
 /**
- * keep_count- keeps count of the string index position
+ * print_num- print number
  * @n: argument
- * Return: void
+ * @y: count
+ * Return: count
  */
-void keep_count(int n)
+int print_num(unsigned int n, int y)
 {
-	char c = '0';
+	if (n == 0)
+		return (y);
 
 	if (n / 10)
 	{
-		keep_count(n / 10);
+		y = print_num(n / 10, y);
 	}
-	_putchar(n % 10 + c);
+	_putchar(n % 10 + '0');
+	y++;
+
+	return (y);
 }
 
 /**
  * print_int - print integer
  * @dandi: argument
+ * @y: count
  * Return: 1
  */
-int print_int(va_list dandi)
+int print_int(int y, va_list dandi)
 {
 	int j; /* iterator */
 
 	j = va_arg(dandi, int);
 
+	if (j == 0)
+	{
+		_putchar('0');
+		y++;
+		return (y); /* edgecase */
+	}
+
 	if (j < 0)
 	{
 		j *= -1;
 		_putchar('-');
+		y++;
 	}
-	keep_count((unsigned int) j);
+	y = print_num((unsigned int)j, y);
 
-	return (1);
+	return (y);
 }

@@ -16,16 +16,16 @@
 typedef struct specifier
 {
 	char *args;
-	int (*func)(va_list);
+	int (*func)(int y, va_list);
 
 } sp_t;
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int (*_typedef(const char *str, int y))(va_list);
-int print_char(va_list c);
-int print_string(va_list s);
-void keep_count(int n);
-int print_int(va_list dandi);
+int _typedef(const char *str, int *ptr_i, int y, va_list variables);
+int print_char(int y, va_list c);
+int print_string(int y, va_list s);
+int print_num(unsigned int n, int y);
+int print_int(int y, va_list dandi);
 
 #endif

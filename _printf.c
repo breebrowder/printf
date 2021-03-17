@@ -9,8 +9,9 @@
 int _printf(const char *format, ...)
 {
 	va_list variables;
-	unsigned int i = 0;
-	unsigned int y = 0;
+	int i = 0;
+	int y = 0;
+	int *ptr_i = &i;
 
 	va_start(variables, format);
 
@@ -25,9 +26,9 @@ int _printf(const char *format, ...)
 			y++;
 			i++;
 		}
-		else if (format[i] == '%' && _typedef(format, i + 1) != NULL)
+		else if (format[i] == '%')
 		{
-			y += _typedef(format, i + 1)(variables);
+			y = _typedef(format, ptr_i, y, variables);
 			i++;
 		}
 		else
@@ -36,7 +37,7 @@ int _printf(const char *format, ...)
 			y++;
 		}
 	}
-	return (y);
-
 	va_end(variables);
+
+	return (y);
 }

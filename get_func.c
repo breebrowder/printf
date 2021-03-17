@@ -8,13 +8,13 @@
  * Return: 0
  */
 
-int (*_typedef(const char *str, int y))(va_list)
+int _typedef(const char *str, int *ptr_i, int y, va_list variables)
 {
 	sp_t types[] = {
 		{"c", print_char},
 		{"s", print_string},
 		{"i", print_int},
- 		{"d", print_int},
+		{"d", print_int},
 		{NULL, NULL}
 	};
 
@@ -22,10 +22,10 @@ int (*_typedef(const char *str, int y))(va_list)
 
 	for (j = 0; types[j].args != '\0'; j++)
 	{
-		if (types[j].args[0] == str[y] && str[y + 1] != '\0')
+		if (types[j].args[0] == str[*(ptr_i) + 1])
 		{
-			return (types[j].func);
+			y = types[j].func(y, variables);
 		}
 	}
-	return (NULL);
+	return (y);
 }
