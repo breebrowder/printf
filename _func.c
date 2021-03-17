@@ -40,23 +40,36 @@ int print_string(va_list s)
 /**
  * keep_count- keeps count of the string index position
  * @n: argument
+ * Return: void
+ */
+void keep_count(int n)
+{
+	char c = '0';
+
+	if (n / 10)
+	{
+		keep_count(n / 10);
+	}
+	_putchar(n % 10 + c);
+}
+
+/**
+ * print_int - print integer
+ * @dandi: argument
  * Return: 0
  */
-int keep_count(int n)
+int print_int(va_list dandi)
 {
-	int counter = 0; /* this keeps count of the string */
-	int div = (n / 10);  /* handle left values: divide argument by 10 */
-	int mod = (n % 10); /* right values: get remainder after division */
+	int j;
 
-	if (n != 0) /* 0 is index position */
+	j = va_arg(dandi, int);
+
+	if (j < 0)
 	{
-		div = (n / 10);  /* handle left values: divide argument by 10 */
-		mod = (n % 10); /* right values: get remainder after division */
-		counter += keep_count(mod);
- /* adds the value of the right to variable & assigns result to the variable */
-		counter++;
-		_putchar(div + '0');
-		return (counter);
+		j *= -1;
+		_putchar('-');
 	}
+	keep_count((unsigned int) j);
+
 	return (0);
 }

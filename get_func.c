@@ -13,10 +13,8 @@ int (*_typedef(const char *str, int y))(va_list)
 	sp_t types[] = {
 		{"c", print_char},
 		{"s", print_string},
-/*
- *		{"i", print_int},
- *		{"d", print_int},
-*/
+		{"i", print_int},
+ 		{"d", print_int},
 		{NULL, NULL}
 	};
 

@@ -25,7 +25,7 @@ int _printf(const char *format, ...);
 int (*_typedef(const char *str, int y))(va_list);
 int print_char(va_list c);
 int print_string(va_list s);
-int print_int(va_list id);
-int keep_count(int n);
+void keep_count(int n);
+int print_int(va_list dandi);
 
 #endif
