@@ -1,6 +1,7 @@
 #include <limits.h>
 #include <stdio.h>
 #include "holberton.h"
+
 int main(void)
 {
 struct comp
