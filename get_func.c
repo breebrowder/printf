@@ -3,7 +3,9 @@
 /**
  * @*_typedef- struct of specifier types
  * @str: arguments being passed
+ * @ptr_i: pointer to format index
  * @y: position of args
+ * @variables: va_list name
  *
  * Return: 0
  */
