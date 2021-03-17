@@ -56,11 +56,11 @@ void keep_count(int n)
 /**
  * print_int - print integer
  * @dandi: argument
- * Return: 0
+ * Return: 1
  */
 int print_int(va_list dandi)
 {
-	int j;
+	int j; /* iterator */
 
 	j = va_arg(dandi, int);
 
