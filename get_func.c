@@ -17,6 +17,7 @@ int _typedef(const char *str, int *ptr_i, int y, va_list variables)
 		{"s", print_string},
 		{"i", print_int},
 		{"d", print_int},
+		{"r", print_rev},
 		{NULL, NULL}
 	};
 
