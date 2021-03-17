@@ -71,5 +71,5 @@ int print_int(va_list dandi)
 	}
 	keep_count((unsigned int) j);
 
-	return (0);
+	return (1);
 }
