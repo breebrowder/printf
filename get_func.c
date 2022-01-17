@@ -18,6 +18,7 @@ int _typedef(const char *str, int *ptr_i, int y, va_list variables)
 		{"i", print_int},
 		{"d", print_int},
 		{"r", print_rev},
+		/*	{"p", p_rot13}, */
 		{NULL, NULL}
 	};
 
