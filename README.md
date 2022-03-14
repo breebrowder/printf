@@ -1,5 +1,9 @@
 # PrintFUN Group Project- Cohort 14
 
+## Project
+
+1. [Printf](https://intranet.hbtn.io/projects/228)
+
 ## Description
 
 This is a recreation of a popular C language function that can do formatted printing to standard output. Tasked to us by Holberton School, this emulation of the already popular function will provide us with a better understanding of the inner workings of the printf function.
