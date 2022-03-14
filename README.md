@@ -36,11 +36,24 @@ $  gcc -Wall -Werror -Wextra -pedantic *.c
 ### Resources
 [Secrets of Printf](https://www.cypress.com/file/54761/download)
 
-### Contributors
-1. Bree Browder - 2372@holbertonschool.com
-3. Brian Kong - 2783@holbertonschool.com
-4. Suzanne Allen - 2672@holbertonschool.com
+## Contributors
+1. Bree Browder - [GitHub](https://github.com/breebrowder)
+2. Brian Kong - [GitHub](https://github.com/rkbrian)
 
-```
-Project Due Date: March 17, 2021
-```
+
+## About the Developer  💬
+
+### Bree Browder
+
+Bree is known for her creativity, organization, and self awareness. Advances in technology have played an integral part in her life. As an empathy-driven problem solver, Bree wants to be at the forefront of design for products, and to continuously design with others in mind, especially those who tend to be marginalized or forgotten.
+
+### Follow Me
+
+- 📁 [LinkedIn](https://www.linkedin.com/in/breebrowder/)
+- ✍️ [Medium](https://medium.com/@breebrowder)
+- 🖥️ [Portfolio Website](https://breebrowder.github.io)
+
+### Email Me
+📩: browder.bree@gmail.com
+
+
